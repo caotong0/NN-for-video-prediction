@@ -1,0 +1,47 @@
+{
+  "projectFiles": [
+    "config.json",
+    "engine.py",
+    "models/clstm.py",
+    "models/ConvLSTM.py",
+    "dataset/mm.py"
+  ],
+  "data": {
+    "dataset": "movingMnist",
+    "dataroot": "dataset/",
+    "inChannel": 16,
+    "toy": "",
+    "size": 25,
+    "pad": 0,
+    "sub": false,
+    "num_digits": [
+      2
+    ],
+    "train": {
+      "numWorkers": 8,
+      "batchSize": 32,
+      "shuffle": false
+    },
+    "test": {
+      "numWorkers": 8,
+      "batchSize": 64,
+      "shuffle": false
+    }
+  },
+  "model": {
+    "arch": "StaBriNet",
+    "useBN": false,
+    "epochs": 400,
+    "testFreq": 5,
+    "optimizer": "Adam",
+    "learningRate": 3e-3,
+    "weightDecay": 1e-4,
+    "dropout": 0.2
+  },
+  "Training": true,
+  "gif": true,
+  "continue": 0,
+  "Loss": "l1",
+  "Numpre": 10,
+  "Numin": 10
+}
